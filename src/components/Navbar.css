@@ -1,0 +1,170 @@
+/* ==========================
+   Navbar - Modern Enhanced Style
+========================== */
+
+.navbar {
+  background-color: #0d3b66; /* deep blue */
+  color: white;
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Poppins', Arial, sans-serif;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+.navbar:hover {
+  background-color: #094a8f;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.75rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: #9eb7c5; /* bright accent for logo */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links li a:hover {
+  color: #ffdd00;
+  border-bottom: 2px solid #ffdd00;
+}
+
+/* Profile Menu */
+.profile-menu {
+  position: relative;
+}
+
+.profile-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.profile-photo {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #ffdd00;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 55px;
+  background-color: #f5f5f5;
+  color: #121212;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  min-width: 200px;
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.profile-menu:hover .profile-dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.profile-dropdown p {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.profile-dropdown button {
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: #0d3b66;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.profile-dropdown button:hover {
+  background-color: #094a8f;
+}
+
+/* Cart Icon and badge */
+.cart-link {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-icon {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.3s ease;
+}
+
+.cart-icon:hover {
+  transform: scale(1.1);
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: #ff3b3b;
+  color: white;
+  font-weight: bold;
+  font-size: 0.75rem;
+  border-radius: 50%;
+  padding: 3px 6px;
+  user-select: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .profile-photo {
+    width: 36px;
+    height: 36px;
+  }
+  .cart-icon {
+    width: 32px;
+    height: 32px;
+  }
+}

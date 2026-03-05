@@ -1,0 +1,164 @@
+/* ==========================
+   Distributor Section - Professional 4x4 Grid
+========================== */
+
+/* Container */
+.distributors-container {
+  text-align: center;
+  padding: 100px 40px;
+  background: #0f1115; /* deep dark background */
+  color: #e0e0e0;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Section Title */
+.distributors-container h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 60px;
+  color: #f5f5f5;
+}
+
+/* Grid Layout - 4 columns on large screens */
+.distributors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4x4 layout */
+  gap: 35px;
+  justify-items: center;
+  align-items: stretch; /* ensures uniform card height */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Distributor Card */
+.distributor-card {
+  position: relative;
+  background: #1c1f26;
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  border-left: 5px solid #4ba3c3;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-left-color 0.35s ease, background 0.35s ease;
+  height: 300px; /* fixed height for uniformity */
+  width: 100%; /* fills grid cell */
+  max-width: 280px; /* optional max width for uniformity */
+}
+
+/* Hover Effect */
+.distributor-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+  border-left-color: #f39c12;
+  background: #22242d;
+}
+
+/* Distributor Logo Container */
+.distributor-logo-container {
+  height: 120px; /* fixed container height for all logos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* Distributor Logo */
+.distributor-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Distributor Name */
+.distributor-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #f5f5f5;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+/* Overlay / Hover Text */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  border-radius: 18px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.distributor-card:hover .overlay {
+  opacity: 1;
+}
+
+.hover-text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: #e0e0e0;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  width: 90%;
+  box-shadow: 0 0 12px rgba(243, 156, 18, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.distributor-card:hover .hover-text {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Responsive Layouts */
+@media (max-width: 1200px) {
+  .distributors-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .distributors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .distributors-container {
+    padding: 60px 20px;
+  }
+
+  .distributors-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .distributor-card {
+    height: 280px;
+    padding: 20px 15px;
+  }
+
+  .distributor-logo-container {
+    height: 100px;
+  }
+
+  .hover-text {
+    font-size: 0.95rem;
+    padding: 10px 15px;
+  }
+}
