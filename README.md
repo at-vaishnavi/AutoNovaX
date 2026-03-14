@@ -1,36 +1,125 @@
-# AutoNovaX
+# AutoNovaX – Automobile E-Commerce Website
 
-AutoNovaX is a modern, responsive frontend-only e-commerce website for automobile parts and accessories. Built with React, it is fully functional in the browser but does not have a backend. All interactions like the shopping cart are simulated on the client side. Features include product listings with images and descriptions, product details page, simulated shopping cart, and pages like Home, About, Contact, FAQ, Distributors, Profile, Login, and Logout. The website is fully responsive and has a clean, modern UI using React components and CSS.
+## About the Project
 
-**Note:** This project is for demonstration purposes only and is not open source.
+**AutoNovaX** is a modern **frontend-only automobile e-commerce website** for browsing automobile spare parts and accessories.
+
+The project is built using **React** and demonstrates how an online automobile store interface works without a backend. Users can browse products, view product details, and interact with a **simulated shopping cart implemented on the client side**.
+
+This project focuses on **frontend development, UI design, and component-based architecture**.
+
+**Note:** This project is for **demonstration purposes only**. It does not include a backend, database, or payment system.
+
+---
 
 ## Features
-- Product listings with images and descriptions
-- Product details page
-- Simulated shopping cart (no backend)
-- Pages: Home, About, Contact, FAQ, Distributors, Profile, Login/Logout
-- Responsive design for desktop, tablet, and mobile
-- Clean, modern UI with React components and CSS
 
-**Project Structure:**  
-autonovax/  
-├─ public/           # Static HTML, favicon, manifest  
-├─ src/  
-│  ├─ assets/        # Images for products, banners, logos  
-│  │  ├─ products/   # Product images (airfilter.png, bolero.png, etc.)  
-│  ├─ components/    # Reusable UI components (Navbar.js, Navbar.css)  
-│  ├─ pages/         # Page components (Home.js, ProductList.js, Cart.js, etc.)  
-│  ├─ styles/        # CSS files (Home.css, About.css, etc.)  
-├─ package.json  
-├─ package-lock.json  
-├─ .gitignore  
-└─ README.md  
+* Product listings with images and descriptions
+* Product details page
+* Simulated shopping cart (client-side only)
+* Pages included:
 
-## How to Run
-1. Clone the repository:  
-```bash
+  * Home
+  * About
+  * Contact
+  * FAQ
+  * Distributors
+  * Profile
+  * Login / Logout
+* Responsive design for **desktop, tablet, and mobile**
+* Clean UI built using **React components and CSS**
+
+---
+
+## Tech Stack
+
+* React
+* JavaScript
+* HTML
+* CSS
+* Node.js / npm
+
+---
+
+## Project Screenshots
+
+### Home Page
+
+![AutoNovaX Screenshot 1](autonovax1.png)
+
+### Product Listings
+
+![AutoNovaX Screenshot 2](autonovax2.png)
+
+### Shopping Cart
+
+![AutoNovaX Screenshot 3](autonovax3.png)
+
+---
+
+## Project Structure
+
+```
+AutoNovaX
+│
+├── public
+│
+├── src
+│   ├── assets        # Images and media files
+│   ├── components    # Reusable UI components
+│   ├── pages         # Website pages
+│   ├── styles        # CSS files
+│   ├── App.js
+│   ├── index.js
+│   └── index.css
+│
+├── .env
+├── .gitignore
+├── README.md
+├── package.json
+├── package-lock.json
+├── autonovax1.png
+├── autonovax2.png
+└── autonovax3.png
+```
+
+---
+
+## How to Run the Project
+
+1. Clone the repository
+
+```
 git clone https://github.com/at-vaishnavi/AutoNovaX.git
+```
+
+2. Navigate to the project folder
+
+```
 cd AutoNovaX
+```
+
+3. Install dependencies
+
+```
 npm install
+```
+
+4. Run the development server
+
+```
 npm start
-npm run build
+```
+
+---
+
+## Future Improvements
+
+* Add backend integration
+* Implement user authentication
+* Add product database
+* Implement payment gateway
+* Improve product search and filtering
+
+---
+
